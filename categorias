@@ -1,0 +1,173 @@
+
+package codigo;
+
+import java.util.Random;
+
+public class categorias {
+    
+public String[] animales = {
+    "gato", "rana", "oso", "lobo", "pato", "pez", "zorro", "buho", "rata", "burro",
+    "ardilla", "elefante", "mariposa", "cocodrilo", "pingüino", "cangrejo", "jirafa", "tortuga", "tiburón", "gorrión",
+    "chimpancé", "orangután", "hipopótamo", "canguro", "avestruz", "pantera", "cóndor", "narval", "quetzal", "escarabajo"
+};
+
+   
+public String[] ciudades = {
+    "lima", "roma", "praga", "oslo", "tokyo", "parís", "pekín", "delhi", "cairo", "madrid",
+    "londres", "moscú", "berlín", "sydney", "ottawa", "chicago", "bogotá", "toronto", "houston", "seúl",
+    "barcelona", "singapur", "melbourne", "vancouver", "estambul", "johannesburg", "ciudad de méxico", "nueva york", "los ángeles", "buenos aires"
+};
+
+
+public String[] entretenimiento = {
+    "300", "cars", "jaws", "mulan", "rocky", "venom", "alien", "shrek", "joker", "ghost",
+    "titanic", "avengers", "friends", "vikings", "avatar", "frozen", "aladdin", "batman", "pirates", "simpsons",
+    "inception", "jurassicpark", "harrypotter", "blackmirror", "gameofthrones", "breakingbad", "strangerthings", "thesimpsons", "themandalorian", "thecrown"
+};
+
+public String[] famosos = {
+    "cher", "drake", "adele", "oprah", "elvis", "kanye", "eminem", "jay-z", "bieber", "gaga",
+    "ronaldo", "beyoncé", "clooney", "madonna", "shakira", "rihanna", "dicaprio", "beckham", "timberlake", "stallone",
+    "kardashian", "schwarzenegger", "washington", "hemsworth", "streep", "witherspoon", "depp", "lawrence", "winslet", "johansson"
+};
+
+
+ 
+   
+  public String GetAnimales(int nivel){
+     Random random = new Random();
+      int posicion;
+      String palabra;
+      
+     if(nivel == 1){
+      posicion = random.nextInt(0,11);
+     }
+     else if (nivel == 2){
+         posicion = random.nextInt(10,21);
+     }
+     else{
+           posicion = random.nextInt(20,30);
+     }
+      palabra = animales[posicion];
+      
+       if(palabra == null){
+          if(posicion<=28){
+              posicion += 1;
+                palabra = animales[posicion];
+          }
+          else{
+              posicion -=1;
+               palabra = animales[posicion];
+          } 
+       }
+       
+      animales[posicion] = null;
+        return palabra;  
+  }
+  
+  
+  
+    public String GetCiudades(String[] palabras, int nivel){
+     Random random = new Random();
+      int posicion;
+      String palabra;
+      
+     if(nivel == 1){
+      posicion = random.nextInt(0,11);
+     }
+     else if (nivel == 2){
+         posicion = random.nextInt(10,21);
+     }
+     else{
+           posicion = random.nextInt(20,30);
+     }
+      palabra = ciudades[posicion];
+      
+       if(palabra == null){
+          if(posicion<=28){
+              posicion += 1;
+                palabra = ciudades[posicion];
+          }
+          else{
+              posicion -=1;
+               palabra = ciudades[posicion];
+          } 
+       }
+       
+      ciudades[posicion] = null;
+        return palabra;  
+  }
+    
+    
+    
+       public String GetEntretenimiento(String[] palabras, int nivel){
+     Random random = new Random();
+      int posicion;
+      String palabra;
+      
+     if(nivel == 1){
+      posicion = random.nextInt(0,11);
+     }
+     else if (nivel == 2){
+         posicion = random.nextInt(10,21);
+     }
+     else{
+           posicion = random.nextInt(20,30);
+     }
+      palabra = entretenimiento[posicion];
+      
+       if(palabra == null){
+          if(posicion<=28){
+              posicion += 1;
+                palabra = entretenimiento[posicion];
+          }
+          else{
+              posicion -=1;
+               palabra = entretenimiento[posicion];
+          } 
+       }
+       
+      entretenimiento[posicion] = null;
+        return palabra;  
+  }
+       
+       
+       
+       
+       
+          public String GetFamosos(String[] palabras, int nivel){
+     Random random = new Random();
+      int posicion;
+      String palabra;
+      
+     if(nivel == 1){
+      posicion = random.nextInt(0,11);
+     }
+     else if (nivel == 2){
+         posicion = random.nextInt(10,21);
+     }
+     else{
+           posicion = random.nextInt(20,30);
+     }
+      palabra = famosos[posicion];
+      
+       if(palabra == null){
+          if(posicion<=28){
+              posicion += 1;
+                palabra = famosos[posicion];
+          }
+          else{
+              posicion -=1;
+               palabra = famosos[posicion];
+          } 
+       }
+       
+      famosos[posicion] = null;
+        return palabra;  
+  }
+    
+    
+    
+  
+   
+}
