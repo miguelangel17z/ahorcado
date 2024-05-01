@@ -5,37 +5,38 @@ import java.util.Random;
 
 public class categorias {
     
-public String[] animales = {
+
+ public static String[] animales = {
     "gato", "rana", "oso", "lobo", "pato", "pez", "zorro", "buho", "rata", "burro",
     "ardilla", "elefante", "mariposa", "cocodrilo", "pingüino", "cangrejo", "jirafa", "tortuga", "tiburón", "gorrión",
     "chimpancé", "orangután", "hipopótamo", "canguro", "avestruz", "pantera", "cóndor", "narval", "quetzal", "escarabajo"
 };
 
    
-public String[] ciudades = {
+public static String[] ciudades = {
     "lima", "roma", "praga", "oslo", "tokyo", "parís", "pekín", "delhi", "cairo", "madrid",
     "londres", "moscú", "berlín", "sydney", "ottawa", "chicago", "bogotá", "toronto", "houston", "seúl",
     "barcelona", "singapur", "melbourne", "vancouver", "estambul", "johannesburg", "ciudad de méxico", "nueva york", "los ángeles", "buenos aires"
 };
 
 
-public String[] entretenimiento = {
+public static String[] entretenimiento = {
     "300", "cars", "jaws", "mulan", "rocky", "venom", "alien", "shrek", "joker", "ghost",
     "titanic", "avengers", "friends", "vikings", "avatar", "frozen", "aladdin", "batman", "pirates", "simpsons",
     "inception", "jurassicpark", "harrypotter", "blackmirror", "gameofthrones", "breakingbad", "strangerthings", "thesimpsons", "themandalorian", "thecrown"
 };
 
-public String[] famosos = {
+ public static String[] famosos = {
     "cher", "drake", "adele", "oprah", "elvis", "kanye", "eminem", "jay-z", "bieber", "gaga",
     "ronaldo", "beyoncé", "clooney", "madonna", "shakira", "rihanna", "dicaprio", "beckham", "timberlake", "stallone",
     "kardashian", "schwarzenegger", "washington", "hemsworth", "streep", "witherspoon", "depp", "lawrence", "winslet", "johansson"
 };
-
-
+  
  
    
   public String GetAnimales(int nivel){
      Random random = new Random();
+     
       int posicion;
       String palabra;
       
@@ -67,7 +68,7 @@ public String[] famosos = {
   
   
   
-    public String GetCiudades(String[] palabras, int nivel){
+    public String GetCiudades( int nivel){
      Random random = new Random();
       int posicion;
       String palabra;
@@ -100,7 +101,7 @@ public String[] famosos = {
     
     
     
-       public String GetEntretenimiento(String[] palabras, int nivel){
+       public String GetEntretenimiento( int nivel){
      Random random = new Random();
       int posicion;
       String palabra;
@@ -135,7 +136,7 @@ public String[] famosos = {
        
        
        
-          public String GetFamosos(String[] palabras, int nivel){
+          public String GetFamosos( int nivel){
      Random random = new Random();
       int posicion;
       String palabra;
@@ -165,6 +166,39 @@ public String[] famosos = {
       famosos[posicion] = null;
         return palabra;  
   }
+          
+          
+          
+          
+         public void inicializarJuego(){
+               animales = new String[]{
+    "gato", "rana", "oso", "lobo", "pato", "pez", "zorro", "buho", "rata", "burro",
+    "ardilla", "elefante", "mariposa", "cocodrilo", "pingüino", "cangrejo", "jirafa", "tortuga", "tiburón", "gorrión",
+    "chimpancé", "orangután", "hipopótamo", "canguro", "avestruz", "pantera", "cóndor", "narval", "quetzal", "escarabajo"
+};
+
+   
+ ciudades = new String[]{
+    "lima", "roma", "praga", "oslo", "tokyo", "parís", "pekín", "delhi", "cairo", "madrid",
+    "londres", "moscú", "berlín", "sydney", "ottawa", "chicago", "bogotá", "toronto", "houston", "seúl",
+    "barcelona", "singapur", "melbourne", "vancouver", "estambul", "johannesburg", "ciudad de méxico", "nueva york", "los ángeles", "buenos aires"
+};
+
+
+ entretenimiento = new String[] {
+    "300", "cars", "jaws", "mulan", "rocky", "venom", "alien", "shrek", "joker", "ghost",
+    "titanic", "avengers", "friends", "vikings", "avatar", "frozen", "aladdin", "batman", "pirates", "simpsons",
+    "inception", "jurassicpark", "harrypotter", "blackmirror", "gameofthrones", "breakingbad", "strangerthings", "thesimpsons", "themandalorian", "thecrown"
+};
+
+famosos = new String[]{
+    "cher", "drake", "adele", "oprah", "elvis", "kanye", "eminem", "jay-z", "bieber", "gaga",
+    "ronaldo", "beyoncé", "clooney", "madonna", "shakira", "rihanna", "dicaprio", "beckham", "timberlake", "stallone",
+    "kardashian", "schwarzenegger", "washington", "hemsworth", "streep", "witherspoon", "depp", "lawrence", "winslet", "johansson"
+};
+  
+          }
+                  
     
     
     
